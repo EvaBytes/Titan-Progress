@@ -9,7 +9,7 @@ export const analyzeTrainingData = async (trainingData) => {
     },
     body: JSON.stringify({
       prompt: `Analyze this training data: ${trainingData}`,
-      max_tokens: 150, // Adjust based on your API's needs
+      max_tokens: 200, // Adjust based on your API's needs
     }),
   });
 
