@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import HomePage from './pages/HomePage.jsx';
 import ResultsPage from './pages/ResultsPage.jsx';
 import './App.css';
 
 function App() {
+  const [analysisData, setAnalysisData] = useState(null);
+
   return (
     <Router>
       <header>
@@ -20,8 +23,8 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/results" element={<ResultsPage />} />
+          <Route path="/" element={<HomePage setAnalysisData={setAnalysisData} />} />
+          <Route path="/results" element={<ResultsPage analysisData={analysisData} />} />
         </Routes>
       </main>
     </Router>
