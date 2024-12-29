@@ -1,0 +1,66 @@
+Using the following requirements, create a JSON object from the following workout description:
+
+{wod_description}
+
+1. Include a list of **main muscle groups** with percentage contributions to each muscle group based on typical biomechanics. The main muscle groups to include are:
+   - Chest
+   - Back
+   - Shoulders
+   - Biceps
+   - Triceps
+   - Forearms
+   - Core
+   - Quadriceps
+   - Hamstrings
+   - Glutes
+   - Calves
+   - Hip Flexors
+   - Adductors
+   - Neck
+
+2. Include a list of **movement patterns** with percentage contributions to each movement pattern based on typical biomechanics. The movement patterns to include are:
+   - Upper-body pulling
+   - Upper-body pushing
+   - Squatting
+   - Hip hinging
+   - Rotational
+   - Locomotion
+   - Lunging
+   - Carrying
+   - Jumping/Explosive
+   - Isometric holds
+
+Return the data in the following JSON structure:
+
+{{
+    "muscle_groups": {{
+        "Chest": 100,
+        "Back": 100,
+        "Shoulders": 100,
+        "Biceps": 100,
+        "Triceps": 100,
+        "Forearms": 100,
+        "Core": 100,
+        "Quadriceps": 100,
+        "Hamstrings": 100,
+        "Glutes": 100,
+        "Calves": 100,
+        "Hip Flexors": 100,
+        "Adductors": 100,
+        "Neck": 100
+    }},
+    "movement_patterns": {{
+        "Upper-body pulling": 100,
+        "Upper-body pushing": 100,
+        "Squatting": 100,
+        "Hip hinging": 100,
+        "Rotational": 100,
+        "Locomotion": 100,
+        "Lunging": 100,
+        "Carrying": 100,
+        "Jumping/Explosive": 100,
+        "Isometric holds": 100
+    }}
+}}
+
+Only return a JSON object that can be parse by a Python parser. Nothing else in the response.
